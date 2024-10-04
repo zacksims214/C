@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-//helpful for tracking stack info, completely optional but you lose access to ISFULL and ISEMPTY
+//helpful for tracking stack info, completely optional but you lose access to ISFULL, ISEMPTY and GETBYTES 
 typedef struct {       
     intptr_t base;
     intptr_t top;
