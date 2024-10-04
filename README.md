@@ -18,4 +18,4 @@ stack_notype.h: this will need some explaining, see below
     bool ISEMPTY(sp, sd) : Returns whether or not the stack is empty. Returns 1 on yes, 0 on no
     intptr_t GETBYTES(sp, sd) : Returns size remaining on stack in bytes, hence the name.
 
-  
+More to come
