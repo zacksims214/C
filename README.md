@@ -1,5 +1,5 @@
 VIEW AS CODE FOR FORMATTING
-Some random C files, will elaboraate on any files that need so here
+Some random C/nasm files, will elaboraate on any files that need so here
 
 Stack.h: not much to be said, the implementation prevents the user from doing anything too bad. See commments in file for further explanation
 
