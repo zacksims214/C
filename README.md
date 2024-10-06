@@ -10,7 +10,7 @@ stack_notype.h: this will need some explaining, see below
   
   3: If StackData is omitted, then user must pay real close attention to pushing/popping, pushing past stack will segfault/abort, popping past corrupts address under the stack and might crash if block underneath isn't in address space(very unlikely)
   
-  4: The stack does the following: on a push, we store at sp, THEN set it to the next address. on a pop, we dec sp, THEN retrive value
+  4: The stack does the following: on a push, we store at sp, THEN set it to the next address. on a pop, we dec sp, THEN retreive value
   
   5: Function Descriptions: 
   
