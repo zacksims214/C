@@ -47,4 +47,4 @@ commands to run shell.asm:
 
   ./shell
 
-More to come
+More to come, I had an OS project that was too easy in C, so I'll probably try and write it in assembly, will be posted soon if I do so
