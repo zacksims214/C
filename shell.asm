@@ -6,8 +6,6 @@ section .data
     prompt db "$ ", 0
     promptL equ $ - prompt
 
-    nullbyte db "\0"
-
     errmsg db "Error!!!",10,0
     errmsgL equ $ - errmsg
 
