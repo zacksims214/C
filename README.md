@@ -31,4 +31,20 @@ stack_notype.h: this will need some explaining, see below
     intptr_t GETBYTES(sp, sd) : Returns size remaining on stack in bytes, hence the name.
     
 
+shell.c:
+
+this acts as a simple shell in a linux environment, needs to be run on a linux machine or VM, WSL as well. Exit shell with CTRL+C
+
+shell.asm
+
+this is the same exact program as shell.c, but in x86_64 NASM. Again, I'm using linux syscalls so run on Linux. If shell.c runs, this should too.
+
+commands to run shell.asm:
+
+  nasm -f elf64 shell.asm
+
+  ld shell.o -o shell
+
+  ./shell
+
 More to come
