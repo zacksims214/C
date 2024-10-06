@@ -72,9 +72,8 @@ _start:
         jz child
 
         ;in parent, we wait for child
-        push rax
+        mov rdi, rax
         mov rax, 61
-        pop rdi
 
         ;we dont care about options, just wait on child
         mov rsi, 0
