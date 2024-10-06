@@ -3,6 +3,7 @@ Some random C/nasm files, will elaboraate on any files that need so here
 Stack.h: not much to be said, the implementation prevents the user from doing anything too bad. See commments in file for further explanation
 
 stack_notype.h: this will need some explaining, see below
+
   1: You MUST use gcc, I'm using GNU extensions ({}) and typeof, WILL NOT run without
   
   2:  A call to create should be followed by creating a StackData pointer and using SETDATA() to set the data in it. Allows use of ISFULL/EMPTY and GETBYTES, useful for handling out of bound crashes
