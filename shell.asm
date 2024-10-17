@@ -61,7 +61,7 @@ _start:
         cmp rax, 0
         js error
 
-        ;buffer now holds command, lets fork uglass
+        ;buffer now holds command, lets fork
         mov rax, 57
         syscall
      
