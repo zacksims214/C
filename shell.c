@@ -21,7 +21,7 @@ int main(void) {
 
 	//write message
 	if((write(1, message, strlen(message))) < strlen(message))
-        syserr("Write error\n");
+        	syserr("Write error\n");
 
 	for(;;) 
 	{
