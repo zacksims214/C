@@ -1,3 +1,8 @@
+;RUNS ON LINUX ONLY, NO WINDOWS
+;procedure to convert an unsigned integer and convert it to a string and print it. Similar to the MIPS print int syscall, but here we're using linux write syscall
+;linux only writes to screen from a buffer, so we must convert to ascii, hence the slightly complicated implementation
+;rax holds the number to be printed, no return value
+
 bits 64
 
 section .data
@@ -56,20 +61,20 @@ print:
 	;print digit label
 	mov rax, 1
 	mov rdi, 1
-    mov rsi, digit
-    mov rdx, 1
-    syscall
+    	mov rsi, digit
+    	mov rdx, 1
+    	syscall
 
 	;dec counter and check
 	dec r10
 	jnz print
 
 printLine:
-    mov eax, 1
-    mov edi, 1
-    mov esi, newline
-    mov edx, newlineL
-    syscall
+    	mov eax, 1
+    	mov edi, 1
+    	mov esi, newline
+    	mov edx, newlineL
+    	syscall
 
 	pop rbp
 	ret
