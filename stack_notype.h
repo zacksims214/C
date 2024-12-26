@@ -1,14 +1,17 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-//helpful for tracking stack info, completely optional but you lose access to ISFULL, ISEMPTY and GETBYTES 
+//A Stack wuith a user defined data type, asssuems ALL elements are the same size, the size of elemenets is what is user defined, eg CREATE(struct foo, 10) 
+//we assume the programmer will check for errors, we simply pass along the error if one is encountered
+
+//helpful for tracking stack info, completely optional but you lose access to ISFULL, ISEMPTY and GETBYTES
 typedef struct {       
     intptr_t base;
     intptr_t top;
     size_t esize;
 }   StackData;
 
-//big boy functions of the stack
+//functions that we'll use 
 #define CREATE(type, nelems) ({ typeof (type)* sp = malloc(sizeof(type) * nelems); sp; })
 #define PUSH(sp, data) ({ void* flag = sp; if(sp) *(sp)++ = data; flag; })
 #define POP(sp) ({ void* vp = sp; if(sp) vp = --(sp); vp; })
