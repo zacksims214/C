@@ -16,7 +16,7 @@ typedef struct {
 #define PUSH(sp, data) ({ void* flag = sp; if(sp) *(sp)++ = data; flag; })
 #define POP(sp) ({ void* vp = sp; if(sp) vp = --(sp); vp; })
 #define SETDATA(sp, sizeB, nelems) ({ StackData* sd = malloc(sizeof(StackData)); if(sd != NULL) { sd->base = (intptr_t) sp; sd->top =  ((intptr_t) sp + (nelems * sizeB)); sd->esize = sizeB; } sd; })
-#define DELETE(sp) (free(sp))
+#define DELETE(base) (free(base))            
 #define ISFULL(sp, sd) ( (intptr_t) sp == sd->top )
 #define ISEMPTY(sp, sd) ( (intptr_t) sp == sd->base)
 #define GETBYTES(sp, sd) ({ intptr_t x = sd->top - ((intptr_t) sp); x; })
