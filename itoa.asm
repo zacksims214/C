@@ -1,5 +1,5 @@
 ;RUNS ON LINUX ONLY, NO WINDOWS
-;procedure to convert an unsigned integer and convert it to a string and print it. Similar to the MIPS print int syscall, but here we're using linux write syscall
+;procedure that takes an unsigned integer and convert it to a string and prints it. Similar to the MIPS print int syscall, but here we're using linux write syscall here
 ;linux only writes to screen from a buffer, so we must convert to ascii, hence the slightly complicated implementation
 ;rax holds the number to be printed, no return value
 
