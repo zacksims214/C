@@ -1,8 +1,4 @@
 bits 64
-
-section .bss
-	digit resq 1
-
 section .text
 
 global sqrt
